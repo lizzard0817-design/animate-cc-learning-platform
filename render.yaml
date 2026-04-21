@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: animate-cc-api
+    env: python
+    rootDir: server
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: DATABASE_URL
+        sync: false
+      - key: PORT
+        value: 8000
+    autoDeploy: true

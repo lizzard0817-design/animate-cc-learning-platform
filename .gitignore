@@ -30,6 +30,7 @@ server/*.pyc
 server/*.pyo
 server/.venv
 server/venv/
+server/.env
 
 # Database
 *.db
